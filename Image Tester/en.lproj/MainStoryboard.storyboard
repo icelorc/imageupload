@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2o3-FS-lRX"/>
+                        <viewControllerLayoutGuide type="bottom" id="l1J-Jc-GKU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-Lm-YMR">
+                                <rect key="frame" x="80" y="373" width="161" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="YDs-7c-JWD"/>
+                                    <constraint firstAttribute="height" constant="62" id="iaW-gE-m2C"/>
+                                </constraints>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="2" eventType="touchUpInside" id="zUF-XR-Z4a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW9-xS-fma">
+                                <rect key="frame" x="122" y="484" width="96" height="30"/>
+                                <state key="normal" title="Send Pictures">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPicture:" destination="2" eventType="touchUpInside" id="ukJ-ZY-4Oa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Image Count:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYm-vq-Cpf">
+                                <rect key="frame" x="57" y="41" width="161" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="MJC-hf-ESz"/>
+                                    <constraint firstAttribute="width" constant="161" id="fHS-4a-xcd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LW-It-H3y">
+                                <rect key="frame" x="226" y="47" width="60" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Dvc-FH-Z16"/>
+                                    <constraint firstAttribute="height" constant="65" id="lop-99-R0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edA-7R-xYM">
+                                <rect key="frame" x="40" y="136" width="241" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="cZU-x9-N8U"/>
+                                    <constraint firstAttribute="width" constant="241" id="fFW-E0-L2G"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="edA-7R-xYM" firstAttribute="top" secondItem="3" secondAttribute="top" priority="525" constant="136" id="2I4-nj-5g0"/>
+                            <constraint firstAttribute="trailing" secondItem="uW9-xS-fma" secondAttribute="trailing" constant="102" id="648-LN-BnK"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="edA-7R-xYM" secondAttribute="bottom" constant="50" id="6ol-Lp-S3a"/>
+                            <constraint firstItem="uYm-vq-Cpf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="41" id="7pu-na-PkJ"/>
+                            <constraint firstItem="edA-7R-xYM" firstAttribute="top" relation="lessThanOrEqual" secondItem="3" secondAttribute="top" constant="136" id="Dy1-A6-Ku4"/>
+                            <constraint firstAttribute="trailing" secondItem="hQ9-Lm-YMR" secondAttribute="trailing" constant="79" id="FGj-HA-BKD"/>
+                            <constraint firstItem="edA-7R-xYM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="40" id="dQj-dq-L9y"/>
+                            <constraint firstAttribute="bottom" secondItem="uW9-xS-fma" secondAttribute="bottom" constant="54" id="goj-8y-JA2"/>
+                            <constraint firstAttribute="bottom" secondItem="hQ9-Lm-YMR" secondAttribute="bottom" constant="133" id="kED-Mt-KKK"/>
+                            <constraint firstItem="uW9-xS-fma" firstAttribute="trailing" secondItem="uYm-vq-Cpf" secondAttribute="trailing" id="p37-LF-ddA"/>
+                            <constraint firstItem="8LW-It-H3y" firstAttribute="leading" secondItem="uYm-vq-Cpf" secondAttribute="trailing" constant="8" symbolic="YES" id="uz2-uX-7p0"/>
+                            <constraint firstItem="8LW-It-H3y" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" id="xPA-bH-7YL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageCountLabel" destination="8LW-It-H3y" id="hDh-5m-Z6r"/>
+                        <outlet property="imagePreview" destination="edA-7R-xYM" id="a7a-4c-cRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
